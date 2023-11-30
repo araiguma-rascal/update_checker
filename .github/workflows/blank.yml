@@ -1,0 +1,42 @@
+# This is a basic workflow to help you get started with Actions
+
+name: cron
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron:  '0 */6 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+env:
+  LINE_NOTIFY_TOKEN: ${{secrets.LINE_NOTIFY_TOKEN}}
+  MAIL: ${{secrets.MAIL}}
+  PASSWORD: ${{secrets.PASSWORD}}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Install Package
+        run: |
+          pip install get-chrome-driver --upgrade
+          pip install selenium
+          pip install python-dotenv
+      - name: Run Selenium
+        run: python scraper.py
+      - name: Upload result
+        uses: actions/upload-artifact@v3
+        with:
+          name: status
+          path: status.txt
