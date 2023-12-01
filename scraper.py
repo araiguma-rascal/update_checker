@@ -48,11 +48,11 @@ def main():
     time.sleep(2)
 
     # Live Manuscriptsをクリック
-    driver.find_element(By.ID, 'DisplayTasks-add_ndt_task-9111-3').click()
+    driver.find_element(By.PARTIAL_LINK_TEXT, 'Live Manuscripts').click()
     time.sleep(2)
 
     # 論文リンクをクリック
-    driver.find_element(By.ID, 'DisplayTasks-add_ndt_task_table_row-9204-1').click()
+    driver.find_element(By.LINK_TEXT, 'APL23-AR-09861').click()
     time.sleep(2)
 
     # Check Statusをクリック
