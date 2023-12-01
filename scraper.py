@@ -56,7 +56,7 @@ def main():
     time.sleep(2)
 
     # Check Statusをクリック
-    driver.find_element(By.ID, 'ViewMs-vms_add_task_expandable-22724-42').click()
+    driver.find_element(By.LINK_TEXT, 'Check Status').click()
     time.sleep(2)
 
     # Statusをスクリーンショット
