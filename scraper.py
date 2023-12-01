@@ -5,6 +5,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 load_dotenv()
 
@@ -27,12 +29,11 @@ def main():
     driver = webdriver.Chrome(options=options)
     # driver = webdriver.Firefox()
 
-    # 指定したドライバの要素が見つかるまでの待ち時間を2秒に設定
-    driver.implicitly_wait(2)
+    # 最大の読み込み時間を設定 今回は最大10秒待機できるようにする
+    wait = WebDriverWait(driver=driver, timeout=10)
 
     # APLのページを開く
     driver.get('https://apl.peerx-press.org/cgi-bin/main.plex')   
-    time.sleep(2)
 
     # ログイン
     mail = driver.find_element(By.ID, 'login')
@@ -45,29 +46,28 @@ def main():
     password.send_keys(os.getenv('PASSWORD'))
     mail.submit()
 
-    time.sleep(2)
-
     # Live Manuscriptsをクリック
+    wait.until(EC.presence_of_all_elements_located((By.PARTIAL_LINK_TEXT, 'Live Manuscripts')))
     driver.find_element(By.PARTIAL_LINK_TEXT, 'Live Manuscripts').click()
-    time.sleep(2)
 
     # 論文リンクをクリック
+    wait.until(EC.presence_of_all_elements_located((By.LINK_TEXT, 'APL23-AR-09861')))
     driver.find_element(By.LINK_TEXT, 'APL23-AR-09861').click()
-    time.sleep(2)
 
     # Check Statusをクリック
+    wait.until(EC.presence_of_all_elements_located((By.LINK_TEXT, 'Check Status')))
     driver.find_element(By.LINK_TEXT, 'Check Status').click()
-    time.sleep(2)
 
     # Statusをスクリーンショット
+    wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'dump_history_table')))
     png = driver.find_element(By.CLASS_NAME, 'dump_history_table').screenshot_as_png
-    time.sleep(2)
 
     # ファイルに保存
     with open(filename, 'wb') as picture:
         picture.write(png)
 
     # Statusに変更があるかチェック
+    wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'dump_history_table')))
     status = driver.find_element(By.CLASS_NAME, 'dump_history_table').text
     print(status)
     flag = True
