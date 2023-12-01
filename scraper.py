@@ -10,6 +10,12 @@ from selenium.webdriver.support import expected_conditions as EC
 
 load_dotenv()
 
+def is_status_changed(status):
+    with open('./status.txt', 'r') as log:
+        prev = log.read()
+        return prev != status
+
+
 def line_notify_image(message,filename):
     line_notify_token = os.getenv('LINE_NOTIFY_TOKEN')
     line_notify_api = 'https://notify-api.line.me/api/notify'
@@ -60,25 +66,18 @@ def main():
 
     # Statusをスクリーンショット
     wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'dump_history_table')))
-    png = driver.find_element(By.CLASS_NAME, 'dump_history_table').screenshot_as_png
+    status = driver.find_element(By.CLASS_NAME, 'dump_history_table')
+    png = status.screenshot_as_png
+    print(status.text)
 
     # ファイルに保存
     with open(filename, 'wb') as picture:
         picture.write(png)
 
-    # Statusに変更があるかチェック
-    wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'dump_history_table')))
-    status = driver.find_element(By.CLASS_NAME, 'dump_history_table').text
-    print(status)
-    flag = True
-    with open('./status.txt', 'r') as log:
-        prev = log.read()
-        flag = (prev != status)
-
     # 変更があった場合、ステータスを更新しLINEに通知
-    if flag:
+    if is_status_changed(status.text):
         with open('./status.txt', 'w') as log:
-            log.write(status)
+            log.write(status.text)
         line_notify_image("Status has changed!", filename)
         print("\nStatus has changed!")
     else:
