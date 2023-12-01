@@ -27,3 +27,4 @@ python update_checker.py
 1. Cloneしたgit repositoryを、自分のリポジトリとしてGithub上に作成する。
 2. Settings → Secrets and variables → Actions → Repository secretsに環境変数`LINE_NOTIFY_TOKEN`, `MAIL`, `PASSWORD`を入力する。
 3. 6時間に一回Github Actionsによって定期実行される。
+4. このプログラムは、変更がある度に新しい`status.txt`をpushしなければなりません。新しい`status.txt`は自分のrepositoryのActionsタブから、実行されたworkflowをクリックすればダウンロードできます。それをpushしてください。
