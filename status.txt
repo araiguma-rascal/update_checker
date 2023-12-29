@@ -1,46 +1,5 @@
 Stage Start Date
-Decision Letter Being Prepared 04-Dec-2023 07:55:39
-Associate Editor Decision Completed 04-Dec-2023 07:55:39
-Associate Editor Decision Started 02-Dec-2023 07:00:25
-All Reviews Received 02-Dec-2023 07:00:25
-Review Received 02-Dec-2023 07:00:25
-All Reviewers Secured 29-Nov-2023 21:27:53
-Review Started 29-Nov-2023 21:27:53
-Potential Reviewer Agreed to Review 29-Nov-2023 21:27:53
-Potential Reviewer Invitation(s) Sent 27-Nov-2023 04:04:32
-Potential Reviewers Selected 27-Nov-2023 04:04:27
-Additional Reviewers Needed 27-Nov-2023 03:56:32
-Associate Editor Review 25-Nov-2023 05:17:57
-Potential Reviewer Declined to Review 25-Nov-2023 05:17:57
-Potential Reviewer Invitation(s) Sent 24-Nov-2023 17:00:46
-Potential Reviewer Declined to Review 23-Nov-2023 18:19:32
-Potential Reviewer Invitation(s) Sent 14-Nov-2023 04:20:02
-Potential Reviewers Selected 14-Nov-2023 04:19:57
-Additional Reviewers Needed 14-Nov-2023 04:17:17
-Potential Reviewers Selected 14-Nov-2023 04:17:11
-Additional Reviewers Needed 14-Nov-2023 04:16:25
-Associate Editor Review 13-Nov-2023 22:49:55
-Potential Reviewer Declined to Review 13-Nov-2023 22:49:55
-Potential Reviewer Invitation(s) Sent 09-Nov-2023 17:00:21
-Potential Reviewer Declined to Review 09-Nov-2023 09:39:02
-Potential Reviewer Invitation(s) Sent 07-Nov-2023 17:00:28
-Potential Reviewer Declined to Review 06-Nov-2023 22:37:44
-Potential Reviewer Invitation(s) Sent 30-Oct-2023 17:00:32
-Potential Reviewer Declined to Review 30-Oct-2023 03:54:53
-Potential Reviewer Invitation(s) Sent 24-Oct-2023 17:00:23
-Review Received 20-Oct-2023 14:51:39
-Potential Reviewer Invitation(s) Sent 11-Oct-2023 17:00:29
-Potential Reviewer Declined to Review 10-Oct-2023 20:24:29
-Review Started 10-Oct-2023 18:02:43
-First Reviewer Secured 10-Oct-2023 18:02:42
-Potential Reviewer Agreed to Review 10-Oct-2023 18:02:42
-Potential Reviewer Invitation(s) Sent 10-Oct-2023 03:48:56
-Potential Reviewers Selected 10-Oct-2023 03:48:54
-Associate Editor Review 09-Oct-2023 11:28:07
-Securing Associate Editor 09-Oct-2023 04:38:00
-Securing Editor 09-Oct-2023 04:38:00
-Submission Check by Editorial Office Completed 09-Oct-2023 04:38:00
-Submission Check by Editorial Office Started 08-Oct-2023 20:56:20
-Securing Editor 08-Oct-2023 20:56:20
-Manuscript Submitted to Editorial Office 08-Oct-2023 20:56:20
-Preliminary Manuscript Data Submitted 04-Oct-2023 22:09:06
+Submission Check by Editorial Office Started 29-Dec-2023 01:24:32
+Securing Editor 29-Dec-2023 01:24:32
+Manuscript Submitted to Editorial Office 29-Dec-2023 01:24:32
+Preliminary Manuscript Data Submitted 04-Dec-2023 19:58:26

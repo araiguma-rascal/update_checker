@@ -56,8 +56,8 @@ def main():
     driver.find_element(By.PARTIAL_LINK_TEXT, 'Live Manuscripts').click()
 
     # 論文リンクをクリック
-    wait.until(EC.presence_of_all_elements_located((By.LINK_TEXT, 'APL23-AR-09861')))
-    driver.find_element(By.LINK_TEXT, 'APL23-AR-09861').click()
+    wait.until(EC.presence_of_all_elements_located((By.LINK_TEXT, 'APL23-AR-09861R')))
+    driver.find_element(By.LINK_TEXT, 'APL23-AR-09861R').click()
 
     # Check Statusをクリック
     wait.until(EC.presence_of_all_elements_located((By.LINK_TEXT, 'Check Status')))
