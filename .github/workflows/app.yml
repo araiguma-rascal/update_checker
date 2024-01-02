@@ -36,7 +36,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Selenium
         run: python scraper.py
-      - name: Auto commit changes
+      - name: Auto Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: update status.txt
