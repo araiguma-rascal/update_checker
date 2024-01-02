@@ -20,9 +20,13 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -32,8 +36,5 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Selenium
         run: python scraper.py
-      - name: Upload result
-        uses: actions/upload-artifact@v3
-        with:
-          name: status
-          path: status.txt
+      - name: Auto commit changes
+      - uses: stefanzweifel/git-auto-commit-action@v5
