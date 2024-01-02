@@ -1,0 +1,4 @@
+# pipでget-chrome-driver, selenium, python-dotenvをバージョン指定してインストール
+get-chrome-driver == 1.3.19
+selenium == 4.4.3
+python-dotenv == 0.21.1
